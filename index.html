@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Sylvie Grillon - Artiste</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body class="no-scroll"> 
+        
+        <div id="haut" class="page-accueil absolute-top niveauz3">
+            <p class="titre">SYLVIE<br>GRILLON</p>
+            <p class="text-secondaire">Scultpure, dessin et gravure</p>
+            ><a href="#footer"><img src="images/accueil-page/flèche_blanche.png" class="fleche" alt=""></a>
+        </div>
+        <div id="footer" class="fenetre absolute-top-100vh niveauz-4"></div>
+        
+        <div class="footer absolute-top-100vh niveauz2">
+            <a href="#haut"><div class="flex-center retour-btn">Retour</div></a>
+            <div class="categorie">
+                <a href="#pagesculpture"
+                    onclick="
+                        var pagescultpure = document.getElementById('pagesculpture');
+                        var pagegravure = document.getElementById('pagegravure');
+                        var pagedessin = document.getElementById('pagedessin');
+                        
+                        pagescultpure.style.zIndex = '1';
+                        pagegravure.style.zIndex = '0';
+                        pagedessin.style.zIndex = '0';
+                ">
+                <div class="case case-sculpture"><p><span class="titre2">SCULPTURE</span><br><span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
+                
+                <a href="#pagegravure" 
+                    onclick="
+                        var pagescultpure = document.getElementById('pagesculpture');
+                        var pagegravure = document.getElementById('pagegravure');
+                        var pagedessin = document.getElementById('pagedessin');
+                        
+                        pagescultpure.style.zIndex = '0';
+                        pagegravure.style.zIndex = '1';
+                        pagedessin.style.zIndex = '0';
+                ">
+                <div class="case case-gravure"><p><span class="titre2">GRAVURE</span><br><span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
+                
+                <a href="#pagedessin" 
+                    onclick="
+                        var pagescultpure = document.getElementById('pagesculpture');
+                        var pagegravure = document.getElementById('pagegravure');
+                        var pagedessin = document.getElementById('pagedessin');
+                        
+                        pagescultpure.style.zIndex = '0';
+                        pagegravure.style.zIndex = '0';
+                        pagedessin.style.zIndex = '1';
+                ">
+                <div class="case case-dessin"><p><span class="titre2">DESSIN</span><br><span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
+            </div>
+            <p class="credit">Crédits: Sylvie Grillon - 2019</p>
+        </div>
+        
+        <div id="pagesculpture" style="z-index: 0;" class="page">
+            testetete
+        </div>
+        
+        <div id="pagegravure" style="z-index: 1;" class="page">
+            
+        </div>
+        
+        <div id="pagedessin" style="z-index: 0;" class="page">
+            
+        </div>     
+        
+        
+    </body>
+</html>
