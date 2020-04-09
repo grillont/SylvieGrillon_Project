@@ -7,6 +7,10 @@ To desable scrolling
 in <body>
 */
 #site{
+    /*display: none;*/
+}
+
+#page-chargement{
     display: none;
 }
 
