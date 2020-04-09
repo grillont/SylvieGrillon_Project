@@ -7,17 +7,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body class="no-scroll"> 
+    <body> 
         
-        <div id="haut" class="page-accueil absolute-top niveauz3">
+        <div id="pageaccueil" style="bottom: 0;" class="page-accueil fixed-bottom niveauz3">
             <p class="titre">SYLVIE<br>GRILLON</p>
             <p class="text-secondaire">Scultpure, dessin et gravure</p>
-            ><a href="#footer"><img src="images/accueil-page/flèche_blanche.png" class="fleche" alt=""></a>
+            <a href="#footer" 
+                onclick="
+                    var pageaccueil = document.getElementById('pageaccueil');
+                    pageaccueil.style.transition = '0.7s';
+                    pageaccueil.style.bottom = '100vh';
+            "><img src="images/accueil-page/flèche_blanche.png" class="fleche" alt=""></a>
         </div>
-        <div id="footer" class="fenetre absolute-top-100vh niveauz-4"></div>
-        
-        <div class="footer absolute-top-100vh niveauz2">
-            <a href="#haut"><div class="flex-center retour-btn">Retour</div></a>
+                
+        <div id="pagecategorie" style="bottom: 0;" class="pagecategorie fixed-bottom niveauz2">
+            <a href="#haut"><div class="flex-center retour-btn" 
+                    onclick="
+                        var pageaccueil = document.getElementById('pageaccueil');
+                        pageaccueil.style.transition = '0.7s';
+                        pageaccueil.style.bottom = '0';
+            ">Retour</div></a>
             <div class="categorie">
                 <a href="#pagesculpture"
                     onclick="
@@ -28,8 +37,16 @@
                         pagescultpure.style.zIndex = '1';
                         pagegravure.style.zIndex = '0';
                         pagedessin.style.zIndex = '0';
+                        
+                        var pagecategorie = document.getElementById('pagecategorie');
+                        pagecategorie.style.transition = '0.7s';
+                        pagecategorie.style.bottom = '100vh';
                 ">
-                <div class="case case-sculpture"><p><span class="titre2">SCULPTURE</span><br><span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
+                    <div class="case case-sculpture">
+                        <p><span class="titre2">SCULPTURE</span><br>
+                           <span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p>
+                    </div>
+                </a>
                 
                 <a href="#pagegravure" 
                     onclick="
@@ -40,6 +57,10 @@
                         pagescultpure.style.zIndex = '0';
                         pagegravure.style.zIndex = '1';
                         pagedessin.style.zIndex = '0';
+                        
+                        var pagecategorie = document.getElementById('pagecategorie');
+                        pagecategorie.style.transition = '0.7s';
+                        pagecategorie.style.bottom = '100vh';
                 ">
                 <div class="case case-gravure"><p><span class="titre2">GRAVURE</span><br><span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
                 
@@ -52,6 +73,10 @@
                         pagescultpure.style.zIndex = '0';
                         pagegravure.style.zIndex = '0';
                         pagedessin.style.zIndex = '1';
+                        
+                        var pagecategorie = document.getElementById('pagecategorie');
+                        pagecategorie.style.transition = '0.7s';
+                        pagecategorie.style.bottom = '100vh';
                 ">
                 <div class="case case-dessin"><p><span class="titre2">DESSIN</span><br><span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
             </div>
@@ -59,14 +84,34 @@
         </div>
         
         <div id="pagesculpture" style="z-index: 0;" class="page">
-            testetete
+            <a href="#haut"><div class="flex-center retour-btn" 
+                    onclick="
+                        var pagecategorie = document.getElementById('pagecategorie');
+                        pagecategorie.style.transition = '0.7s';
+                        pagecategorie.style.bottom = '0';
+            ">Retour</div></a>
+            
         </div>
         
-        <div id="pagegravure" style="z-index: 1;" class="page">
+        <div id="pagegravure" style="z-index: 0;" class="page">
+            <a href="#haut"><div class="flex-center retour-btn" 
+                    onclick="
+                        var pagecategorie = document.getElementById('pagecategorie');
+                        pagecategorie.style.transition = '0.7s';
+                        pagecategorie.style.bottom = '0';
+               ">Retour</div></a>
+            
             
         </div>
         
         <div id="pagedessin" style="z-index: 0;" class="page">
+            <a href="#haut"><div class="flex-center retour-btn" 
+                    onclick="
+                        var pagecategorie = document.getElementById('pagecategorie');
+                        pagecategorie.style.transition = '0.7s';
+                        pagecategorie.style.bottom = '0';
+               ">Retour</div></a>
+            
             
         </div>     
         
