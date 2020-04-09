@@ -1,0 +1,105 @@
+.container{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 0;
+
+}
+
+.header-page{
+    overflow: hidden;
+    
+    margin-bottom: 50px;
+    
+    width: 100%;
+    height: 300px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-page img{
+    width: 100%;
+}
+
+.body-page{
+    box-shadow: 0px -4px 6px black;
+    
+    width: 100%;
+    height: 800px;
+}
+
+#pagesculpture .body-page{
+    background-color: rgb(132, 121, 119);
+}
+
+#pagegravure .body-page{
+    background-color: rgb(202, 202, 202);
+}
+
+#pagedessin .body-page{
+    background-color: rgb(145, 144, 150);
+}
+
+.fenetre{
+    width: 100%;
+    height: 150px;
+}
+
+.bande-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 20vw;
+    padding: auto;
+    
+    margin: 40px;
+    margin-top: 0;
+}
+
+.bande-images .emplacement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
+    width: 15vw;
+    height: 15vw;
+    margin: 7px;
+    
+    transition-property: width, height;
+    transition-duration: 0.4s;
+}
+
+.bande-images .emplacement:hover{
+    width: 18vw;
+    height: 18vw;
+}
+
+.emplacement img{
+    height: 100%;
+}
+
+.galerie{
+    width: 85%;
+    height: 90vh;
+    margin: auto;
+    background-color: red;
+    
+    overflow: auto;
+}
+
+#pagesculpture .galerie{
+    background-color: rgb(122, 121, 119);
+}
+
+#pagegravure .galerie{
+    background-color: rgb(222, 202, 202);
+}
+
+#pagedessin .galerie{
+    background-color: rgb(125, 144, 150);
+}

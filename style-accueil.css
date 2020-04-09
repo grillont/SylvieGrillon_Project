@@ -6,6 +6,9 @@
 To desable scrolling
 in <body>
 */
+#site{
+    display: none;
+}
 
 a{
     text-decoration: none;
@@ -244,20 +247,7 @@ html{
     left: 0;
     right: 0;
     width: 100%;
-    height: 200vh;/*temporaire*/
-}
-
-#pagesculpture{
-    background-color: rgb(132, 121, 119);
-    
-}
-
-#pagegravure{
-    background-color: rgb(202, 202, 202);
-}
-
-#pagedessin{
-    background-color: rgb(145, 144, 150);
+    /*height: 200vh;/*temporaire*/
 }
 
 .footer{
@@ -270,14 +260,4 @@ html{
     
     background-color: black;
     color: white;
-}
-
-.container{
-    margin: auto;
-    width: 90%;
-    height: 100%;
-}
-
-.test{
-    background-color: rgb(214, 214, 214);
 }
