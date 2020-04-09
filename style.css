@@ -111,11 +111,6 @@ html{
     margin: 5px;
 }
 
-.fenetre{
-    width: 100%;
-    height: 100vh;
-}
-
 .fixed-bottom{
     position: fixed;
     bottom: 0;
@@ -136,29 +131,6 @@ html{
     height: 100vh;
     box-shadow: 0px 3px 5px black;
 }
-
-/*.titre{    
-    font-family: "verdana";
-    font-size: 45px;
-    color: #333333;
-    background-color: grey;
-    font-weight: bold;
-    
-    border: solid 3px;
-    border-color: #999999;
-    border-radius: 7px;
-    
-    padding-left: 5px;
-    padding-right: 5px;
-
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
-}
-
-.titre:hover{
-    color: white;
-    background-color: #666666;
-}*/
 
 .categorie{
     display: flex;
@@ -272,7 +244,7 @@ html{
     left: 0;
     right: 0;
     width: 100%;
-    height: 200vh;
+    height: 200vh;/*temporaire*/
 }
 
 #pagesculpture{
@@ -286,4 +258,26 @@ html{
 
 #pagedessin{
     background-color: rgb(145, 144, 150);
+}
+
+.footer{
+    margin: auto;
+    left: 0;
+    right: 0;
+    
+    height: 400px;
+    width: 100%;
+    
+    background-color: black;
+    color: white;
+}
+
+.container{
+    margin: auto;
+    width: 90%;
+    height: 100%;
+}
+
+.test{
+    background-color: rgb(214, 214, 214);
 }
