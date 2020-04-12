@@ -1,0 +1,451 @@
+/*.no-scroll{
+    height: 100%;
+    overflow-y: hidden;
+}
+
+To desable scrolling
+in <body>
+*/
+#site{
+    /*display: none;*/
+}
+
+#page-chargement{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.niveauz4{
+    z-index: 4;
+}
+
+.niveauz3{
+    z-index: 3;
+}
+
+.niveauz2{
+    z-index: 2;
+}
+
+.niveauz1{
+    z-index: 1;
+}
+
+.niveauz0{
+    z-index: 0;
+}
+
+.niveauz-1{
+    z-index: -1;
+}
+
+.niveauz-2{
+    z-index: -2;
+}
+
+.niveauz-3{
+    z-index: -3;
+}
+
+.niveauz-4{
+    z-index: -4;
+}
+
+.absolute-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.absolute-top-100vh{
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    right: 0;
+}
+
+.page-accueil{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/accueil-page/accueil.JPG);
+    background-size: 110%;
+    box-shadow: 0px 3px 5px black;
+    background-position: center;
+}
+
+.page-accueil .titre{
+    margin: auto;
+    margin-left: 2vw;
+    margin-top: 1vh;
+    font-size: 20vh;
+    font-family: "franklin", 'verdana';
+    font-weight: bold;
+    color: white;
+}
+
+.page-accueil .text-secondaire{
+    font-size: 5vh;
+    font-family: "franklin", 'verdana';
+    font-weight: bold;
+    color: white;
+    margin-left: 4vw;
+    margin-top: 0;
+}
+
+.page-accueil .fleche{
+    position: absolute;
+    bottom: 10vh;
+    right: 20vw;
+    border-radius: 50%;
+    box-shadow: 0px 3px 5px black;
+    height: 185px;
+
+    
+    transition-property: height, margin;
+    transition-duration: 0.2s;
+}
+
+.page-accueil .fleche:hover{
+    height: 175px;
+    margin: 5px;
+}
+
+.fixed-bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.fixed-top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.pagecategorie{
+    background-color: rgb(186, 195, 204);
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0px 3px 5px black;
+}
+
+.categorie{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 5vh;
+    width: 85vw;
+}
+
+.credit{
+    padding-top: 7vh;
+    margin: auto;
+    text-align: center;
+}
+
+.case{
+    height: 80vh;
+    width: 25vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.case p{
+    color: white;
+    font-family: "verdana";
+    
+    opacity: 0%;
+    background-color: #666666;
+    height: 0%;
+    width: 100%;
+    margin-left: auto;  
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 0;
+    
+    transition-property: opacity, height;
+    transition-duration: 0.8s;
+}
+
+.case .titre2{
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.case .definition{
+    font-size: 20px;
+    float: bottom;
+    padding: 20px;
+}
+
+.case:hover p{
+    opacity: 70%;
+    height: 100%;
+}
+
+.case-sculpture{
+    background-image: url(images/categorie-page/sculpture.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.case-gravure{
+    background-image: url(images/categorie-page/gravure.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.case-dessin{
+    background-image: url(images/categorie-page/dessin.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.retour-btn{
+  
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    
+    border-radius: 50%;
+    box-shadow: 0px 3px 5px black;
+    
+    height: 80px;
+    margin: 0;
+    
+    transition-property: height, margin;
+    transition-duration: 0.2s;
+}
+
+.retour-btn:hover{
+    height: 74px;
+    margin: 3px;
+}
+
+.page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /*height: 200vh;/*temporaire*/
+}
+
+.footer{
+    margin: auto;
+    left: 0;
+    right: 0;
+    
+    height: 400px;
+    width: 100%;
+    
+    background-color: black;
+    color: white;
+}
+
+
+.container{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 0;
+
+}
+
+.header-page{
+    overflow: hidden;
+    
+    margin-bottom: 50px;
+    
+    width: 100%;
+    height: 300px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-page img{
+    width: 100%;
+}
+
+.body-page{
+    box-shadow: 0px -4px 6px black;
+    
+    width: 100%;
+    height: 800px;
+}
+
+#pagesculpture .body-page{
+    background-color: rgb(132, 121, 119);
+}
+
+#pagegravure .body-page{
+    background-color: rgb(202, 202, 202);
+}
+
+#pagedessin .body-page{
+    background-color: rgb(145, 144, 150);
+}
+
+.fenetre{
+    width: 100%;
+    height: 150px;
+}
+
+.bande-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 20vw;
+    padding: auto;
+    
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 10px;
+    
+        border: solid 1px black;
+}
+
+.bande-images .emplacement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
+    width: 15vw;
+    height: 15vw;
+    margin: 7px;
+    
+    transition-property: width, height;
+    transition-duration: 0.4s;
+}
+
+.bande-images .emplacement:hover{
+    width: 18vw;
+    height: 18vw;
+}
+
+.emplacement img{
+    height: 100%;
+}
+
+.galerie{
+    width: 85%;
+    height: 78vh;
+    border-bottom: solid 1px black;
+
+    margin: auto;
+
+    overflow: auto;
+}
+
+#pagesculpture .galerie{
+    background-color: rgb(122, 121, 119);
+}
+
+#pagegravure .galerie{
+    background-color: rgb(222, 202, 202);
+}
+
+#pagedessin .galerie{
+    background-color: rgb(145, 144, 150);
+}
+
+.color{
+    background-color: rgb(122, 129, 119);
+}
+
+.page-details{
+    position: fixed;
+    top: 0;
+
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    
+    box-shadow: 3px 3px 5px black;
+}
+
+.espace-navbar-dispo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+ .navbar-page-details{
+    display: flex;
+    justify-content: center;
+    position: fixed;    
+    z-index: 10;
+    bottom: 0;
+    margin: auto;
+    border: solid 2.5px black;
+    border-radius: 4px;
+}
+
+.navbar-page-details .btn{
+    margin: 5px;
+    padding: 5px;
+    border: solid 2px grey;
+    border-radius: 3px;
+    background-color: #cccccc;
+    
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.navbar-page-details .btn:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+#page1{
+    background-color: blue;
+}
+
+#page2{
+    background-color: red;
+}
+
+#page3{
+    background-color: green;
+}
+
+#page4{
+    background-color: yellow;
+}
+
+#page5{
+    background-color: orange;
+}
+
+object{
+    height: 100%;
+    width: 100%;
+}

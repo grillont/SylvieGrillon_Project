@@ -5,8 +5,7 @@
         <title>Sylvie Grillon - Artiste</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style-accueil.css" rel="stylesheet" type="text/css"/>
-        <link href="style-page.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body> 
         <div id="page-chargement">chargement</div>
@@ -98,7 +97,7 @@
                     <div class="header-page niveauz-1"><img src="images/page-scultpure/header/texture.JPG" alt=""></div>
                     <div class="fenetre"></div>
                     <div class="body-page">
-
+                        <a href="page-sculpture-details.html"><div id="galerie-sculpture" class="galerie"><!--affichage Javascript--></div></a>
                     </div>
                 </div>  
             </div>
@@ -115,7 +114,7 @@
                     <div class="header-page niveauz-1"><img src="images/page-gravure/header/texture.JPG" alt=""></div>
                     <div class="fenetre"></div>
                     <div class="body-page">
-
+                        <div id="galerie-gravure" class="galerie"><!--affichage Javascript--></div>
                     </div>
                 </div>
             </div>
@@ -132,39 +131,7 @@
                     <div class="header-page niveauz-1"><img src="images/page-dessin/header/texture.jpg" alt=""></div>
                     <div class="fenetre"></div>
                     <div class="body-page">
-                        <div class="galerie">
-                            <div class="bande-images color">
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande1/img1.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande1/img2.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande1/img3.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande1/img4.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande1/img5.JPG" alt=""></div>
-                            </div>
-
-                            <div class="bande-images color">
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img1.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img2.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img3.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img4.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img5.JPG" alt=""></div>
-                            </div>
-                            
-                            <div class="bande-images color">
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img1.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img2.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img3.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img4.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img5.JPG" alt=""></div>
-                            </div>
-                            
-                            <div class="bande-images color">
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img1.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img2.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img3.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img4.JPG" alt=""></div>
-                                <div class="emplacement"><img src="images/page-dessin/bandes/bande2/img5.JPG" alt=""></div>
-                            </div>
-                        </div>
+                        <div id="galerie-dessin" class="galerie"><!--affichage Javascript--> </div>
                     </div>
                 </div>
             </div> 
@@ -177,6 +144,26 @@
                     $('#site').fadeIn("1000");
                 }); 
             });
+        </script>
+        
+        <script>
+            function creation_galerie(ref_galerie, nb_bandes, categorie){
+                var contenu_galerie = '';
+                for(var i=1; i<=nb_bandes; i++){
+                    contenu_galerie += '<div class="bande-images color">\n\
+                    <div class="emplacement"><img src="images/page-'+categorie+'/bandes/bande'+i+'/img1.JPG" alt=""></div>\n\
+                    <div class="emplacement"><img src="images/page-'+categorie+'/bandes/bande'+i+'/img2.JPG" alt=""></div>\n\
+                    <div class="emplacement"><img src="images/page-'+categorie+'/bandes/bande'+i+'/img3.JPG" alt=""></div>\n\
+                    <div class="emplacement"><img src="images/page-'+categorie+'/bandes/bande'+i+'/img4.JPG" alt=""></div>\n\
+                    <div class="emplacement"><img src="images/page-'+categorie+'/bandes/bande'+i+'/img5.JPG" alt=""></div>\n\
+                    </div>';
+                }
+                var galerie = document.getElementById(ref_galerie);
+                galerie.innerHTML = contenu_galerie;
+            }
+            creation_galerie('galerie-dessin', 2, 'dessin');
+            creation_galerie('galerie-gravure', 4, 'gravure');
+            creation_galerie('galerie-sculpture', 5, 'sculpture');
         </script>
     </body>
 </html>
