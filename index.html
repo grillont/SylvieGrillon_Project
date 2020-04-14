@@ -30,111 +30,23 @@
                             pageaccueil.style.bottom = '0';
                 "></a>
                 <div class="categorie">
-                    <a href="#pagesculpture"
-                        onclick="
-                            var pagescultpure = document.getElementById('pagesculpture');
-                            var pagegravure = document.getElementById('pagegravure');
-                            var pagedessin = document.getElementById('pagedessin');
-
-                            pagescultpure.style.zIndex = '1';
-                            pagegravure.style.zIndex = '0';
-                            pagedessin.style.zIndex = '0';
-
-                            var pagecategorie = document.getElementById('pagecategorie');
-                            pagecategorie.style.transition = '0.7s';
-                            pagecategorie.style.bottom = '100vh';
-                    ">
+                    <a href="page-scultpure.html">
                         <div class="case case-sculpture">
                             <p><span class="titre2">SCULPTURE</span><br>
                                <span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p>
                         </div>
                     </a>
 
-                    <a href="#pagegravure" 
-                        onclick="
-                            var pagescultpure = document.getElementById('pagesculpture');
-                            var pagegravure = document.getElementById('pagegravure');
-                            var pagedessin = document.getElementById('pagedessin');
+                    <a href="page-gravure.html">
+                    <div class="case case-gravure"><p><span class="titre2">GRAVURE</span><br>
+                            <span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
 
-                            pagescultpure.style.zIndex = '0';
-                            pagegravure.style.zIndex = '1';
-                            pagedessin.style.zIndex = '0';
-
-                            var pagecategorie = document.getElementById('pagecategorie');
-                            pagecategorie.style.transition = '0.7s';
-                            pagecategorie.style.bottom = '100vh';
-                    ">
-                    <div class="case case-gravure"><p><span class="titre2">GRAVURE</span><br><span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
-
-                    <a href="#pagedessin" 
-                        onclick="
-                            var pagescultpure = document.getElementById('pagesculpture');
-                            var pagegravure = document.getElementById('pagegravure');
-                            var pagedessin = document.getElementById('pagedessin');
-
-                            pagescultpure.style.zIndex = '0';
-                            pagegravure.style.zIndex = '0';
-                            pagedessin.style.zIndex = '1';
-
-                            var pagecategorie = document.getElementById('pagecategorie');
-                            pagecategorie.style.transition = '0.7s';
-                            pagecategorie.style.bottom = '100vh';
-                    ">
-                    <div class="case case-dessin"><p><span class="titre2">DESSIN</span><br><span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
+                    <a href="#pagedessin">
+                    <div class="case case-dessin"><p><span class="titre2">DESSIN</span><br>
+                            <span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
                 </div>
                 <p class="credit">Crédits: Sylvie Grillon - 2019</p>
             </div>
-
-            <div id="pagesculpture" style="z-index: 0;" class="page">
-                <a href="#haut"><img src="images/accueil-page/flèche_retour.png" alt="" class="flex-center retour-btn" 
-                        onclick="
-                            var pagecategorie = document.getElementById('pagecategorie');
-                            pagecategorie.style.transition = '0.7s';
-                            pagecategorie.style.bottom = '0';
-                "></a>
-
-                <div class="">
-                    <div class="header-page niveauz-1"><img src="images/page-scultpure/header/texture.JPG" alt=""></div>
-                    <div class="fenetre"></div>
-                    <div class="body-page">
-                        <a href="page-sculpture-details.html"><div id="galerie-sculpture" class="galerie"><!--affichage Javascript--></div></a>
-                    </div>
-                </div>  
-            </div>
-
-            <div id="pagegravure" style="z-index: 0;" class="page">
-                <a href="#haut"><img src="images/accueil-page/flèche_retour.png" alt="" class="flex-center retour-btn" 
-                        onclick="
-                            var pagecategorie = document.getElementById('pagecategorie');
-                            pagecategorie.style.transition = '0.7s';
-                            pagecategorie.style.bottom = '0';
-                "></a>
-
-                <div class="">
-                    <div class="header-page niveauz-1"><img src="images/page-gravure/header/texture.JPG" alt=""></div>
-                    <div class="fenetre"></div>
-                    <div class="body-page">
-                        <div id="galerie-gravure" class="galerie"><!--affichage Javascript--></div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="pagedessin" style="z-index: 0;" class="page">
-                <a href="#haut"><img src="images/accueil-page/flèche_retour.png" alt="" class="flex-center retour-btn" 
-                        onclick="
-                            var pagecategorie = document.getElementById('pagecategorie');
-                            pagecategorie.style.transition = '0.7s';
-                            pagecategorie.style.bottom = '0';
-                "></a>
-
-                <div class="">
-                    <div class="header-page niveauz-1"><img src="images/page-dessin/header/texture.jpg" alt=""></div>
-                    <div class="fenetre"></div>
-                    <div class="body-page">
-                        <div id="galerie-dessin" class="galerie"><!--affichage Javascript--> </div>
-                    </div>
-                </div>
-            </div> 
         </div>
         
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
@@ -146,24 +58,6 @@
             });
         </script>
         
-        <script>
-            function creation_galerie(ref_galerie, nb_bandes, categorie){
-                var contenu_galerie = '';
-                for(var i=1; i<=nb_bandes; i++){
-                    contenu_galerie += '<div class="bande-images color">\n\
-                    <div class="emplacement"><img src="images/page-'+categorie+'/bandes/bande'+i+'/img1.JPG" alt=""></div>\n\
-                    <div class="emplacement"><img src="images/page-'+categorie+'/bandes/bande'+i+'/img2.JPG" alt=""></div>\n\
-                    <div class="emplacement"><img src="images/page-'+categorie+'/bandes/bande'+i+'/img3.JPG" alt=""></div>\n\
-                    <div class="emplacement"><img src="images/page-'+categorie+'/bandes/bande'+i+'/img4.JPG" alt=""></div>\n\
-                    <div class="emplacement"><img src="images/page-'+categorie+'/bandes/bande'+i+'/img5.JPG" alt=""></div>\n\
-                    </div>';
-                }
-                var galerie = document.getElementById(ref_galerie);
-                galerie.innerHTML = contenu_galerie;
-            }
-            creation_galerie('galerie-dessin', 2, 'dessin');
-            creation_galerie('galerie-gravure', 4, 'gravure');
-            creation_galerie('galerie-sculpture', 5, 'sculpture');
-        </script>
+        
     </body>
 </html>

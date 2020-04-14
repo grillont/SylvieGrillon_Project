@@ -1,0 +1,76 @@
+
+<html>
+    <head>
+        <title>GRAVURE - Sylvie Grillon</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body class="gravure">
+        <nav class="navbar">
+            <a href="page-scultpure.html" class="navbar-btn">Sculpture</a>
+            <a href="" class="navbar-btn">Gravure</a>
+            <a href="page-dessin.html" class="navbar-btn">Dessin</a>
+            <a href="" class="navbar-btn">Acheter</a>
+            <a href="" class="navbar-btn">Actualités</a>
+            <a href="" class="navbar-btn">Me contacter</a>
+        </nav>
+    
+        <div class="page" style="width: 82vw;">
+            <div class="navbar-btn-display" 
+                onclick="var page = document.querySelector('.page');
+                        var btn = document.querySelector('navbar-btn-display');
+                        if(page.style.width === '82vw'){
+                            page.style.width = '100vw';
+                        }else{
+                            page.style.width = '82vw';
+                        }
+                        page.style.transition = '0.3s';
+                        "
+                        ><img src="images/accueil-page/navbar-btn-display.png" alt="">
+            </div>
+            
+            <div class="scrolling-panel"></div>
+            
+            <div id="galerie" class="galerie"><!--JavaScript--></div>
+            
+           
+        </div>
+    <script>
+        var nb_gravure = 4;
+        
+        function onmouseup_galerie(ref_details_bande){
+            var detail = document.getElementById(ref_details_bande);
+                        detail.style.height = '0px';
+                        detail.style.transition = '0.6s';
+        }
+        
+        function onclick_img(num_bande, num_img){
+            var detail = document.getElementById('details-bande'+num_bande+'');
+            detail.innerHTML = '<div class="description"><object data="images/page-gravure/bandes/bande'+num_bande+'/descr.html" type="text/html" width="100%" height="100%"></object></div><img src = \'images/page-sculpture/bandes/bande'+num_bande+'/max/img'+num_img+'.JPG \'>';
+            detail.style.height = '425px';
+            detail.style.transition = '0.6s';
+        }
+        
+        function creation_galerie(nb){
+            var contenu = '';
+            for(var i = 1; i<=nb; i++){
+                contenu += '<div class="container" onmouseup="onmouseup_galerie(\'details-bande'+i+'\');">\n\
+                    <div class="bande">\n\
+                        <img src="images/page-gravure/bandes/bande'+i+'/min/img1.JPG" height="100" alt="" onclick="onclick_img('+i+', 1);">\n\
+                        <img src="images/page-gravure/bandes/bande'+i+'/min/img2.JPG" height="100" alt="" onclick="onclick_img('+i+', 2);">\n\
+                        <img src="images/page-gravure/bandes/bande'+i+'/min/img3.JPG" height="100" alt="" onclick="onclick_img('+i+', 3);">\n\
+                        <img src="images/page-gravure/bandes/bande'+i+'/min/img4.JPG" height="100" alt="" onclick="onclick_img('+i+', 4);">\n\
+                        <img src="images/page-gravure/bandes/bande'+i+'/min/img5.JPG" height="100" alt="" onclick="onclick_img('+i+', 5);">\n\
+                    </div>\n\
+                    <div id="details-bande'+i+'" class="details-bande" style="height: 0;"></div>\n\
+                    </div>';
+            }
+            var gal = document.getElementById('galerie');
+            gal.innerHTML = contenu;
+        }
+        creation_galerie(nb_gravure);
+    </script>
+    
+    </body>
+</html>
