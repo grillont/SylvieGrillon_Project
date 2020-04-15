@@ -294,9 +294,10 @@ html{
     height: max-content;
     width: 82vw;
     box-shadow: -1px -1px 5px grey;
+    background-color: rgb(245, 245, 245);
 }
 
-.sculpture .page{
+/*.sculpture .page{
     background-color: rgb(132, 121, 119);
 }
 
@@ -306,7 +307,7 @@ html{
 
 .dessin .page{
     background-color: rgb(245, 245, 245);
-}
+}*/
 
 .navbar-btn-display{
     position: fixed;
