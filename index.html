@@ -12,14 +12,21 @@
         
         <div id="site">
             <div id="pageaccueil" style="bottom: 0;" class="page-accueil fixed-bottom niveauz3">
-                <p class="titre">SYLVIE<br>GRILLON</p>
-                <p class="text-secondaire">Scultpure, dessin et gravure</p>
-                <a href="#footer" 
-                    onclick="
+                <div class="background-navbar-accueil"></div>
+                <div class="navbar-accueil">
+                    <a onclick="
                         var pageaccueil = document.getElementById('pageaccueil');
                         pageaccueil.style.transition = '0.7s';
                         pageaccueil.style.bottom = '100vh';
-                "><img src="images/accueil-page/flèche_blanche.png" class="fleche" alt=""></a>
+                ">Accéder</a>
+                    <a href="">Acheter</a>
+                    <a href="">Actualités</a>
+                    <a href="">Me contacter</a>
+                </div>
+                <div class="accueil-text">
+                    <p class="titre">SYLVIE<br>GRILLON</p>
+                    <p class="text-secondaire">Scultpure, dessin et gravure</p>
+                </div>
             </div>
 
             <div id="pagecategorie" style="bottom: 0;" class="pagecategorie fixed-bottom niveauz2">
@@ -32,18 +39,21 @@
                 <div class="categorie">
                     <a href="page-scultpure.html">
                         <div class="case case-sculpture">
-                            <p><span class="titre2">SCULPTURE</span><br>
-                               <span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p>
+                            <p><span class="titre2">SCULPTURE</span></p>
                         </div>
                     </a>
 
                     <a href="page-gravure.html">
-                    <div class="case case-gravure"><p><span class="titre2">GRAVURE</span><br>
-                            <span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
+                        <div class="case case-gravure">
+                            <p><span class="titre2">GRAVURE</span></p>
+                        </div>
+                    </a>
 
                     <a href="#pagedessin">
-                    <div class="case case-dessin"><p><span class="titre2">DESSIN</span><br>
-                            <span class="definition">kjqhfkjhfkjs kj k jhkjh fdkjh</span></p></div></a>
+                        <div class="case case-dessin">
+                            <p><span class="titre2">DESSIN</span></p>
+                        </div>
+                    </a>
                 </div>
                 <p class="credit">Crédits: Sylvie Grillon - 2019</p>
             </div>

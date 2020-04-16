@@ -72,6 +72,41 @@ html{
     right: 0;
 }
 
+.background-navbar-accueil{
+    background-color: rgb(241, 241, 241);
+    opacity: 10%;
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.navbar-accueil{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 0px;
+}
+
+.navbar-accueil a{
+    color: white;
+    margin: 25px;
+    font-family: 'Optima';
+    font-size: 26px;
+    cursor: pointer;
+    
+}
+
+.navbar-accueil a:hover{
+    text-decoration: underline;
+    
+}
+
 .page-accueil{
     width: 100%;
     height: 100vh;
@@ -81,41 +116,33 @@ html{
     background-position: center;
 }
 
+.accueil-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 85%;
+}
+
 .page-accueil .titre{
-    margin: auto;
+    margin: 0;
     margin-left: 2vw;
-    margin-top: 1vh;
+    padding: auto;
+    overflow: no-content;
+    width: max-content;
+    
     font-size: 20vh;
-    font-family: "franklin", 'verdana';
+    font-family: "Gill sans", 'verdana';
     font-weight: bold;
     color: white;
 }
 
 .page-accueil .text-secondaire{
     font-size: 5vh;
-    font-family: "franklin", 'verdana';
+    font-family: "Gill sans", 'verdana';
     font-weight: bold;
     color: white;
     margin-left: 4vw;
     margin-top: 0;
-}
-
-.page-accueil .fleche{
-    position: absolute;
-    bottom: 10vh;
-    right: 20vw;
-    border-radius: 50%;
-    box-shadow: 0px 3px 5px black;
-    height: 185px;
-
-    
-    transition-property: height, margin;
-    transition-duration: 0.2s;
-}
-
-.page-accueil .fleche:hover{
-    height: 175px;
-    margin: 5px;
 }
 
 .fixed-bottom{
@@ -133,7 +160,7 @@ html{
 }
 
 .pagecategorie{
-    background-color: rgb(186, 195, 204);
+    background-color: rgb(231, 231, 231);
     width: 100%;
     height: 100vh;
     box-shadow: 0px 3px 5px black;
@@ -144,7 +171,7 @@ html{
     justify-content: center;
     margin: auto;
     margin-top: 5vh;
-    width: 85vw;
+    width: max-content;
 }
 
 .credit{
@@ -160,10 +187,12 @@ html{
     margin-left: 0.5vw;
     margin-top: 15px;
     margin-bottom: 15px;
+    border: solid 3px white;
+    box-shadow: 1px 1px 3px grey;
 }
 .case p{
     color: white;
-    font-family: "verdana";
+    font-family: "Gill sans";
     
     opacity: 0%;
     background-color: #666666;
@@ -173,6 +202,10 @@ html{
     margin-right: auto;
     margin-top: auto;
     margin-bottom: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     transition-property: opacity, height;
     transition-duration: 0.8s;
@@ -184,6 +217,7 @@ html{
     display: flex;
     justify-content: center;
     padding: 50px;
+    margin-bottom: 100px;
 }
 
 .case .definition{
@@ -294,20 +328,8 @@ html{
     height: max-content;
     width: 82vw;
     box-shadow: -1px -1px 5px grey;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(241, 241, 241);
 }
-
-/*.sculpture .page{
-    background-color: rgb(132, 121, 119);
-}
-
-.gravure .page{
-    background-color: rgb(202, 202, 202);
-}
-
-.dessin .page{
-    background-color: rgb(245, 245, 245);
-}*/
 
 .navbar-btn-display{
     position: fixed;
@@ -327,11 +349,22 @@ html{
     height: 100%;
     width: 18vw;
     
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(37, 37, 37);
     
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.espace{
+    height: 150px;
+    width: 100%;
+    background-color: rgb(40, 40, 40);
+}
+
+.petit-espace{
+    height: 50px;
+    width: 100%;
 }
 
 .navbar-btn{
@@ -342,25 +375,44 @@ html{
     justify-content: center;
     
     margin: 5px;
+    margin-top: 10px;
     padding: 5px;
     
-    color: white;
+    color: rgb(241, 241, 241);
     font-size: 3.3vh;
-
-    background-color:  #444444;
+    font-family: 'Gill sans';
     border-radius: 5px;
-    border: solid 2px #777777;
+
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+.navbar-btn:hover{
+background-color:  #666666;
 }
 
 .scrolling-panel{
-    width: 60%;
-    height: 40vh;
+    width: 80%;
+    height: 60vh;
     
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
     
+    border-radius: 2px;
+    
     background-color: orange;
+    
+    overflow: auto;
+}
+
+.slider{
+    height: max-content;
+    width: 100%;
+}
+
+.scrolling-panel img{
+    width: 100%;
 }
 
 .galerie{
@@ -370,77 +422,76 @@ html{
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.container{
-    padding: 5px;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: rgb(220, 220, 220);
+    
 }
 
 .bande{
-    width: 90%;
+    width: 100%;
     height: max-content;
     
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     
-    display: flex;
-    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+    border-radius: 2px;
+    background-color: white;
+    
+    box-shadow: 2px 2px 2px grey;
+}
+
+.bande .img-main{
+    width: 80%;
+    height: 60vh;
     
     overflow: auto;
-    border-radius: 4px;
-}
-
-/*.sculpture .bande{
-    background-color: darkgray;
-}
-
-.gravure .bande{
-    background-color: darkgray;
-}
-*/
-.dessin .bande{
-    background-color: rgb(220, 220, 220);
-    }
-
-
-
-.bande img{
-    margin: 5px;
-    border-radius: 2px;
-}
-
-.bande img:hover{
-    box-shadow: 3px 3px 4px black;
-}
-
-.details-bande{
-    display: flex;
-    height: max-content;
-    width: max-content;
+    
     margin: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
+
+    box-shadow: 2px 2px 2px #444444;
 }
 
-.description{
-    width: calc(45vw - 300px);
-    height: 425px;
-    margin-right: 5px;
+.img-main img{
+    width: 100%;
 }
 
-.sculpture .description{
-    background-color: olive;
+.bande-img-secondaire{
+    width: 80%;
+    height: 180px;
+    
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    
+    border: solid 2px rgb(241, 241, 241);
+    
+    overflow: auto;
+    display: flex;
 }
 
-.gravure .description{
-    background-color: olive;
+.bande-img-secondaire img{
+   border: solid 1px white; 
+   opacity: 100%;
+   
+   transition-property: opacity;
+   transition-duration: 0.3s;
 }
 
-.dessin .description{
-    background-color: olive;
+.bande-img-secondaire img:hover{
+    opacity: 70%;
+}
+
+.info-oeuvre{
+    background-color: rgb(241, 241, 241);
+    box-shadow: 1px 1px 2px #444444;
+    width: 80%;
+    height: 40vh;
+    margin: auto;
+}
+
+.info-oeuvre object{
+    width: 100%;
+    height: 100%;
 }

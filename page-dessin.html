@@ -8,11 +8,15 @@
     </head>
     <body class="dessin">
         <nav class="navbar">
+            <a href="index.html"><img src="images/accueil-page/flèche_retour.png" alt="" class="flex-center retour-btn"></a>
+            <div class="espace"></div>
             <a href="page-scultpure.html" class="navbar-btn">Sculpture</a>
             <a href="page-gravure.html" class="navbar-btn">Gravure</a>
             <a href="" class="navbar-btn">Dessin</a>
+            <div class="petit-espace"></div>
             <a href="" class="navbar-btn">Acheter</a>
             <a href="" class="navbar-btn">Actualités</a>
+            <div class="petit-espace"></div>
             <a href="" class="navbar-btn">Me contacter</a>
         </nav>
     
@@ -32,43 +36,45 @@
             
             <div class="scrolling-panel"></div>
             
-            <div id="galerie" class="galerie"><!--JavaScript--></div>
+            <div id="galerie" class="galerie"></div>
             
            
         </div>
     <script>
         var nb_dessin = 4;
         
-        function onmouseup_galerie(ref_details_bande){
-            var detail = document.getElementById(ref_details_bande);
-                        detail.style.height = '0px';
-                        detail.style.transition = '0.6s';
-        }
-        
         function onclick_img(num_bande, num_img){
-            var detail = document.getElementById('details-bande'+num_bande+'');
-            detail.innerHTML = '<div class="description"><object data="images/page-dessin/bandes/bande'+num_bande+'/descr.html" type="text/html" width="100%" height="100%"></object></div><img src = \'images/page-sculpture/bandes/bande'+num_bande+'/max/img'+num_img+'.JPG \'>';
-            detail.style.height = '425px';
-            detail.style.transition = '0.6s';
+            var detail = document.getElementById('main-img'+num_bande+'');
+            detail.innerHTML = '<img src="images/page-dessin/bandes/bande'+num_bande+'/max/img'+num_img+'.JPG" alt="">';
         }
         
         function creation_galerie(nb){
             var contenu = '';
-            for(var i = 1; i<=nb; i++){
-                contenu += '<div class="container" onmouseup="onmouseup_galerie(\'details-bande'+i+'\');">\n\
-                    <div class="bande">\n\
-                        <img src="images/page-dessin/bandes/bande'+i+'/min/img1.JPG" height="100" alt="" onclick="onclick_img('+i+', 1);">\n\
-                        <img src="images/page-dessin/bandes/bande'+i+'/min/img2.JPG" height="100" alt="" onclick="onclick_img('+i+', 2);">\n\
-                        <img src="images/page-dessin/bandes/bande'+i+'/min/img3.JPG" height="100" alt="" onclick="onclick_img('+i+', 3);">\n\
-                        <img src="images/page-dessin/bandes/bande'+i+'/min/img4.JPG" height="100" alt="" onclick="onclick_img('+i+', 4);">\n\
-                        <img src="images/page-dessin/bandes/bande'+i+'/min/img5.JPG" height="100" alt="" onclick="onclick_img('+i+', 5);">\n\
+            for(var i=1; i<=nb; i++){
+                
+                contenu += '<div class="bande">\
+                    <div id="main-img'+i+'" class="img-main">\n\
+                        <img src="images/page-dessin/bandes/bande'+i+'/max/img1.JPG" alt="">\n\
                     </div>\n\
-                    <div id="details-bande'+i+'" class="details-bande" style="height: 0;"></div>\n\
-                    </div>';
+                    <div class="bande-img-secondaire">\n\
+                        <img src="images/page-dessin/bandes/bande'+i+'/min/img1.JPG" alt=""\n\
+                             onclick="onclick_img('+i+', 1);">\n\
+                        <img src="images/page-dessin/bandes/bande'+i+'/min/img2.JPG" alt=""\n\
+                             onclick="onclick_img('+i+', 2);">\n\
+                        <img src="images/page-dessin/bandes/bande'+i+'/min/img3.JPG" alt=""\n\
+                             onclick="onclick_img('+i+', 3);">\n\
+                        <img src="images/page-dessin/bandes/bande'+i+'/min/img4.JPG" alt=""\n\
+                             onclick="onclick_img('+i+', 4);">\n\
+                        <img src="images/page-dessin/bandes/bande'+i+'/min/img5.JPG" alt=""\n\
+                             onclick="onclick_img('+i+', 5);">\n\
+                    </div>\n\
+                    <div class="info-oeuvre"><object data="images/page-dessin/bandes/bande'+i+'/descr.html" type="text/html"></object></div>\n\
+                </div>\n';
             }
             var gal = document.getElementById('galerie');
             gal.innerHTML = contenu;
         }
+        
         creation_galerie(nb_dessin);
     </script>
     
