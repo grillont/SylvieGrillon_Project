@@ -99,12 +99,27 @@ html{
     font-family: 'Optima';
     font-size: 26px;
     cursor: pointer;
+    position: relative;
     
 }
 
-.navbar-accueil a:hover{
-    text-decoration: underline;
+.navbar-accueil a:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100px;
+    right:100px;
+    bottom: 0;
+    z-index: -1;
+    border-bottom: solid 2px white;
     
+    transition-property: left, right;
+    transition-duration: 0.5s;
+}
+
+.navbar-accueil a:hover:after{
+    left: 0px;
+    right: 0px;
 }
 
 .page-accueil{
