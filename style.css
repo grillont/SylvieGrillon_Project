@@ -530,9 +530,9 @@ background-color:  #666666;
 
 
 @media screen and (max-width: 1080px){
-    
-    body{
-        display: none;
-    }
+        
+    .page-accueil{
+    background-size: 150%;
+}
     
 }
