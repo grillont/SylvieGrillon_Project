@@ -533,7 +533,6 @@ background-color:  #666666;
         
 .page-accueil{
     background-size: 160vh;
-    backgr
 }
     
 .page-accueil .titre{
@@ -542,6 +541,22 @@ background-color:  #666666;
 
 .page-accueil .text-secondaire{
     font-size: 4.5vw;
+    margin-bottom: 150px;
+}
+
+.navbar-accueil{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 0px;
+}
+
+.navbar-accueil a{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
 }
 
 }
