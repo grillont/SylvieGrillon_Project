@@ -532,7 +532,8 @@ background-color:  #666666;
 @media screen and (max-width: 1080px){
         
 .page-accueil{
-    background-size: 150%;
+    background-size: 160vh;
+    backgr
 }
     
 .page-accueil .titre{
@@ -540,7 +541,7 @@ background-color:  #666666;
 }
 
 .page-accueil .text-secondaire{
-    font-size: 5vw;
+    font-size: 4.5vw;
 }
 
 }
