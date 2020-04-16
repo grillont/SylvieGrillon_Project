@@ -532,11 +532,13 @@ background-color:  #666666;
 @media screen and (max-width: 1080px){
         
 .page-accueil{
-    background-size: 160vh;
+    background-image: url(images/accueil-page/accueil_mobile.JPG);
 }
     
 .page-accueil .titre{
     font-size: 15vw;
+    font-weight: bold;
+
 }
 
 .page-accueil .text-secondaire{
@@ -545,12 +547,7 @@ background-color:  #666666;
 }
 
 .navbar-accueil{
-    width: 100%;
-    height: max-content;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    padding-top: 0px;
+    padding-top: 100px;
 }
 
 .navbar-accueil a{
