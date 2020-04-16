@@ -72,17 +72,7 @@ html{
     right: 0;
 }
 
-.background-navbar-accueil{
-    background-color: rgb(241, 241, 241);
-    opacity: 10%;
-    width: 100%;
-    height: 90px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-}
+
 
 .navbar-accueil{
     width: 100%;
@@ -91,6 +81,21 @@ html{
     justify-content: center;
     margin: auto;
     padding-top: 0px;
+    
+    position: relative;
+}
+
+.navbar-accueil:after{
+    content: '';
+    background-color: rgb(241, 241, 241);
+    opacity: 10%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .navbar-accueil a{
@@ -547,7 +552,7 @@ background-color:  #666666;
 }
 
 .navbar-accueil{
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .navbar-accueil a{
