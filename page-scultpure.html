@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body class="sculpture">
+    <body>
+        
         <nav class="navbar">
             <a href="index.html"><img src="images/accueil-page/flèche_retour.png" alt="" class="flex-center retour-btn"></a>
             <div class="espace"></div>
@@ -20,19 +21,22 @@
             <a href="" class="navbar-btn">Me contacter</a>
         </nav>
     
-        <div class="page" style="width: 82vw;">
-            <div class="navbar-btn-display" 
-                onclick="var page = document.querySelector('.page');
-                        var btn = document.querySelector('navbar-btn-display');
-                        if(page.style.width === '82vw'){
-                            page.style.width = '100vw';
+    <div class="navbar-btn-display" 
+                onclick="var navbar = document.querySelector('.navbar');
+                        var page = document.querySelector('.page');
+                        if(navbar.style.display === 'flex'){
+                            navbar.style.display = 'none';
+                            page.style.filter = 'blur(0px)';
                         }else{
-                            page.style.width = '82vw';
+                            navbar.style.display = 'flex';
+                            page.style.filter = 'blur(3px)';
+
                         }
-                        page.style.transition = '0.3s';
                         "
                         ><img src="images/accueil-page/navbar-btn-display.png" alt="">
             </div>
+    
+        <div class="page" style="filter: blur(0px);">
             
             <div class="scrolling-panel">
                 <div class="slider">
@@ -41,10 +45,7 @@
                     <img src="images/page-sculpture/header/scrolling-panel/img3.JPG" alt="">
                 </div>
             </div>
-            
             <div id="galerie" class="galerie"></div>
-            
-           
         </div>
     <script>
         var nb_sculpture = 4;
@@ -79,6 +80,7 @@
             }
             var gal = document.getElementById('galerie');
             gal.innerHTML = contenu;
+
         }
         
         creation_galerie(nb_sculpture);
